@@ -1,8 +1,5 @@
 import unittest
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
 # Import tests
 from public.Home import Home
 from public.WhatIsDlayer import WhatIsDlayer
