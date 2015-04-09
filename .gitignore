@@ -5,10 +5,6 @@ __pycache__/
 # C extensions
 *.so
 
-# Sublime config
-*.sublime-project
-*.sublime-workspace
-
 # Distribution / packaging
 .Python
 env/
@@ -59,3 +55,5 @@ docs/_build/
 
 # PyBuilder
 target/
+*.sublime-workspace
+*.sublime-project
