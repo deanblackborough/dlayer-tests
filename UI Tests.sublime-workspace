@@ -23,89 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sign-in.py",
-			"settings":
-			{
-				"buffer_size": 534,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "signIn/TestConfig.py",
-			"settings":
-			{
-				"buffer_size": 279,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "signIn/Home.py",
-			"settings":
-			{
-				"buffer_size": 367,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "import unittest\n\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys \nfrom selenium.webdriver.support.ui import WebDriverWait\n\nfrom signIn.TestConfig import TestConfig\n\nclass User3(unittest.TestCase, TestConfig):\n\n	def setUp(self):\n		TestConfig.setUp(self)		\n\n	def testSignIn(self):\n		driver = self.driver\n		driver.get(self.test_url)\n		element = driver.find_element_by_id(\"identity\")\n		element.send_keys(\"user-3@dlayer.com\")\n		element = driver.find_element_by_id(\"credentials\")\n		element.send_keys(\"password-3\")\n		element = driver.find_element_by_id(\"submit\")\n		element.send_keys(Keys.RETURN)\n		self.assertIn(\"Dlayer.com - Web site development simplified\", driver.title)\n		TestConfig.signOut(self);\n\n	def testIncorrectHostName(self):\n		driver = self.driver\n		driver.get(self.test_url)\n		element = driver.find_element_by_id(\"identity\")\n		element.send_keys(\"user-3@dlayer.comm\")\n		element = driver.find_element_by_id(\"credentials\")\n		element.send_keys(\"password-3\")\n		element = driver.find_element_by_id(\"submit\")\n		element.click()\n		self.assertTrue(driver.find_element_by_css_selector(\"div.has-error input#identity\"))\n		TestConfig.signOut(self);\n\n	def testFailedSignNoPassword(self):\n		driver = self.driver\n		driver.get(self.test_url)\n		element = driver.find_element_by_id(\"iden\")\n		element.send_keys(\"user-3@dlayer.com\")\n		element = driver.find_element_by_id(\"submit\")\n		element.click()\n		self.assertTrue(driver.find_element_by_css_selector(\"div.has-error input#credentials\"))\n		TestConfig.signOut(self);\n\n	def testFailedLogin(self):\n		driver = self.driver\n		driver.get(self.test_url)\n		element = driver.find_element_by_id(\"identity\")\n		element.send_keys(\"user-4@dlayer.com\")\n		element = driver.find_element_by_id(\"credentials\")\n		element.send_keys(\"password-1\")\n		element = driver.find_element_by_id(\"submit\")\n		element.click()\n		self.assertTrue(driver.find_element_by_css_selector(\"div.has-error input#identity\"))\n		TestConfig.signOut(self);\n\n	def tearDown(self):\n		TestConfig.tearDown(self)",
-			"file": "signIn/User3.py",
-			"file_size": 2084,
-			"file_write_time": 130722717162253389,
-			"settings":
-			{
-				"buffer_size": 2020,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/g3d_000/Documents/testPresent.py",
-			"settings":
-			{
-				"buffer_size": 1691,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/TestConfig.py",
-			"settings":
-			{
-				"buffer_size": 182,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "UI Tests.sublime-project",
-			"settings":
-			{
-				"buffer_size": 89,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "signIn/User2.py",
-			"settings":
-			{
-				"buffer_size": 2024,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "signIn/User1.py",
-			"settings":
-			{
-				"buffer_size": 2024,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 740,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
@@ -131,14 +48,19 @@
 	},
 	"file_history":
 	[
-		"/C/Users/g3d_000/AppData/Roaming/Skype/dean.blackborough/config.xml",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/TestConfig.py",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/User3.py",
+		"/C/Users/g3d_000/Documents/testPresent.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/public/TestConfig.py",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/User2.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/User1.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/sign-in.py",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/Home.py",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/UI Tests.sublime-project",
+		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/.gitignore",
+		"/C/Users/g3d_000/AppData/Roaming/Skype/dean.blackborough/config.xml",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/public-pages.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/public/WhatIsDlayer.py",
-		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/Home.py",
-		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/TestConfig.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/signIn/__init__.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/public/SvnReleasePolicy.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/public/Bugs.py",
@@ -152,7 +74,6 @@
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/__init__.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/unittest-example.py",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/Static-Pages",
-		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/UI Tests.sublime-project",
 		"/C/Users/g3d_000/Documents/GitHub/dlayer-tests/UI Tests.sublime-workspace",
 		"/C/Windows/Performance/WinSAT/DataStore/2015-03-16 14.09.19.581 Formal.Assessment (Initial).WinSAT.xml",
 		"/C/Users/g3d_000/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -200,275 +121,8 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sign-in.py",
-					"settings":
-					{
-						"buffer_size": 534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								402,
-								402
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "signIn/TestConfig.py",
-					"settings":
-					{
-						"buffer_size": 279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "signIn/Home.py",
-					"settings":
-					{
-						"buffer_size": 367,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								317,
-								182
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "signIn/User3.py",
-					"settings":
-					{
-						"buffer_size": 2020,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1304,
-								1304
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/g3d_000/Documents/testPresent.py",
-					"settings":
-					{
-						"buffer_size": 1691,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1236,
-								1236
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/TestConfig.py",
-					"settings":
-					{
-						"buffer_size": 182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "UI Tests.sublime-project",
-					"settings":
-					{
-						"buffer_size": 89,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "signIn/User2.py",
-					"settings":
-					{
-						"buffer_size": 2024,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1308,
-								1308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 157.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "signIn/User1.py",
-					"settings":
-					{
-						"buffer_size": 2024,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1308,
-								1308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": ".gitignore",
-					"settings":
-					{
-						"buffer_size": 740,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								740,
-								740
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 247.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

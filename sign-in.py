@@ -8,7 +8,6 @@ from signIn.User3 import User3
 
 def suite():
     test_suite = unittest.TestSuite()
-    test_suite.addTest(unittest.makeSuite(Home))
     test_suite.addTest(unittest.makeSuite(User1))
     test_suite.addTest(unittest.makeSuite(User2))
     test_suite.addTest(unittest.makeSuite(User3))
